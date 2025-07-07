@@ -148,7 +148,6 @@ layout = html.Div(
                                             label='TLM Flow',
                                             id=IDNS+'tlm-flow-openmct-switch'
                                         ),
-                                        dmc.Slider(label='AGC Control')
                                     ],
                                 )
                             ]
@@ -179,7 +178,26 @@ layout = html.Div(
                                     ],
                                 )
                             ]
+                        ),
+                        dmc.Stack(
+                            children=[
+                               dmc.Card(
+                                    radius="md",
+                                    p="xl",
+                                    withBorder=True,
+                                    m=5,
+                                    children=[
+                                        dmc.Text('Simulate Weather Conditions', size="lg", mt="md"),
+                                        dmc.Text('This switch will simulate a weather event that causes a break in the signal', size="sm", c="dimmed", mt="sm"),
+                                        dmc.Switch(
+                                            label='Simulate Weather',
+                                            id=IDNS+'weather-switch'
+                                        )
+                                    ],
+                                ),
+                            ]
                         )
+                        
                         # create_tile(
                         #     icon="uil:paint-tool",
                         #     heading="Dark Theme Support",
